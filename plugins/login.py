@@ -43,7 +43,7 @@ async def login(bot, message):
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
 			
-        return
+        
     username=USER
     if 1 in STATUS:
         m=await bot.send_message(message.from_user.id, "Fetching details from Instagram")
@@ -154,7 +154,7 @@ async def logout(bot, message):
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
 			
-        return
+        
     if 1 in STATUS:
         await message.reply_text("Succesfully Logged Out")
         STATUS.remove(1)
