@@ -37,23 +37,6 @@ session=f"./{USER}"
 STATUS=Config.STATUS
 
 insta = Config.L
-buttons=InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-            InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX")
-        ],
-        [
-            InlineKeyboardButton("🔗Source Code", url="https://github.com/instasavex/Instagram-Bot"),
-            InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-        ],
-        [
-            InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
-            InlineKeyboardButton("⚙️Update Channel", url="https://t.me/YourX")
-        ]
-					
-    ]
-    )
 
 
 
