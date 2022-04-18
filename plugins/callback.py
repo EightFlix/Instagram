@@ -50,21 +50,7 @@ async def cb_handler(bot: Client, query: CallbackQuery):
     if query.data.startswith("help"):
         await query.message.edit_text(
             HELP,
-            reply_markup=InlineKeyboardMarkup(
-			[
-				[
-					InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-					InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX"),
-                    InlineKeyboardButton("⚙️Update Channel", url="https://t.me/YourX")
-				],
-				[
-					InlineKeyboardButton("🔗Source Code", url="https://github.com/instasavex/Instagram-Bot"),
-					InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-				]
-			]
-			)
-		)
-    
+                
     
     elif query.data.startswith("ppic"):
         profile = Profile.from_username(insta.context, username)
