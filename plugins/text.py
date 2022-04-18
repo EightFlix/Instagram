@@ -44,26 +44,7 @@ async def account(bot, message):
         await message.reply_text(
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, int(OWNER)), 
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX"),
-                        
-					],
-                    [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/InstaSaveX/Instagram-Bot"),
-						InlineKeyboardButton("😎 Help", url="https://t.me/YourX")
-                    ],
-                    [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
-                        InlineKeyboardButton("⚙️ Team", url="https://t.me/VishalMehta")
-
-                    ]
-					
-				]
-			)
-		)
+			
         return
     if 1 in STATUS:
         m=await message.reply_text("Getting Your data")
@@ -126,26 +107,7 @@ async def _insta_post_batch(bot, message):
         await message.reply_text(
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, int(OWNER)),
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX"),
-                        
-					],
-                    [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),
-						InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-                    ],
-                    [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
-                        InlineKeyboardButton("⚙️Update Channel", url="https://t.me/YourX")
-
-                    ]
-					
-				]
-			)
-		)
+			
         return
     if 1 not in STATUS:
         await message.reply_text("You Must Login First /login ")
