@@ -42,24 +42,7 @@ async def login(bot, message):
         await message.reply_text(
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX")
-					],
-                    [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/InstaSaveX/Instagram-Bot"),
-						InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-                    ],
-                    [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin")
-
-                    ]
-					
-				]
-			)
-		)
+			
         return
     username=USER
     if 1 in STATUS:
@@ -170,24 +153,7 @@ async def logout(bot, message):
         await message.reply_text(
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX")
-					],
-                    [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/InstaSaveX/Instagram-Bot"),
-						InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-                    ],
-                    [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin")
-
-                    ]
-					
-				]
-			)
-		)
+			
         return
     if 1 in STATUS:
         await message.reply_text("Succesfully Logged Out")
