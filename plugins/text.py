@@ -45,7 +45,7 @@ async def account(bot, message):
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, int(OWNER)), 
 			disable_web_page_preview=True,
 			
-        return
+        
     if 1 in STATUS:
         m=await message.reply_text("Getting Your data")
         try:
@@ -108,7 +108,7 @@ async def _insta_post_batch(bot, message):
             HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, int(OWNER)),
 			disable_web_page_preview=True,
 			
-        return
+        
     if 1 not in STATUS:
         await message.reply_text("You Must Login First /login ")
         return
