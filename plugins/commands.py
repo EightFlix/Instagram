@@ -62,7 +62,7 @@ async def stop(bot, cmd):
 			HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
 			
-		return
+		
 	msg = await bot.send_message(
 		text="Restarting your bot..",
 		chat_id=cmd.from_user.id
