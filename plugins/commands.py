@@ -40,47 +40,12 @@ async def start(bot, cmd):
 		await cmd.reply_text(
 			HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX")
-					],
-                    [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/instasavex/Instagram-Bot"),
-						InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-                    ],
-                    [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
-						InlineKeyboardButton("⚙️Update Channel", url="https://t.me/YourX")
-
-                    ]
-					
-				]
-			)
-		)
+			
 	else:
 		await cmd.reply_text(
 			HOME_TEXT_OWNER.format(cmd.from_user.first_name, cmd.from_user.id), 
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX"),
-					],
-                    [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/instasavex/Instagram-Bot")
-                    ],
-                    [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
-						InlineKeyboardButton("⚙️Update Channel", url="https://t.me/YourX")
-
-                    ]
-					
-				]
-			)
-		)
+			
 
 
 @Client.on_message(filters.command("help") & filters.private)
@@ -88,21 +53,7 @@ async def help(bot, cmd):
 	await cmd.reply_text(
 		HELP,
 		disable_web_page_preview=True,
-		reply_markup=InlineKeyboardMarkup(
-			[
-				[
-					InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-					InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX"),
-					InlineKeyboardButton("⚙️Update Channel", url="https://t.me/YourX")
-					
-				],
-				[
-					InlineKeyboardButton("🔗Source Code", url="https://github.com/instasavex/Instagram-Bot"),
-					InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-				]
-			]
-			)
-		)
+		
 
 @Client.on_message(filters.command("restart") & filters.private)
 async def stop(bot, cmd):
@@ -110,25 +61,7 @@ async def stop(bot, cmd):
 		await cmd.reply_text(
 			HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id, USER, USER, USER, OWNER), 
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-					[
-						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/YourX'),
-						InlineKeyboardButton("🤖Other Bots", url="https://t.me/YourX")	
-					],
-                    [
-                        InlineKeyboardButton("🔗Source Code", url="https://github.com/instasavex/Instagram-Bot"),
-						InlineKeyboardButton("🧩Deploy Own Bot", url="https://t.me/YourX")
-                    ],
-                    [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
-						InlineKeyboardButton("⚙️Update Channel", url="https://t.me/YourX")
-
-                    ]
-					
-				]
-			)
-		)
+			
 		return
 	msg = await bot.send_message(
 		text="Restarting your bot..",
